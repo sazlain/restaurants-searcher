@@ -1,0 +1,37 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    networks:
+      - app-network
+  api:
+    depends_on:
+      - mongodb
+    image: node:14.21.0-alpine
+    container_name: api
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app/api
+    working_dir: /app/api
+    entrypoint: [ "npm", "run", "start:$APP_ENVIROMENT" ]
+    env_file: .env
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
