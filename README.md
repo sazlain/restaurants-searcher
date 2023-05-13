@@ -10,7 +10,6 @@ Asegúrate de tener instalados los siguientes componentes en tu máquina:
 - Docker: [Instrucciones de instalación de Docker](https://docs.docker.com/get-docker/)
 - Docker Compose [Instrucciones de instalación de Docker compose](https://docs.docker.com.zh.xy2401.com/v17.12/compose/install/)
 - Node.js (v14 o superior)
-github
 
 ### Configuración del proyecto
 - Clona este repositorio en tu máquina local:
@@ -22,17 +21,17 @@ github
 - Instalar dependencias del proyecto:
 `$ npm install`
 
-- Crear el archivo .env del proyecto con las siguientes variables (Valores para entorno de desarrollo):
-DB_TYPE=mongodb
-DB_HOST=localhost
-DB_PORT=27017
-DB_USERNAME=admin
-DB_PASSWORD=password
-DB_DATABASE=find-food
+### Crear el archivo .env del proyecto con las siguientes variables (Valores para entorno de desarrollo):
+- DB_TYPE=mongodb
+- DB_HOST=localhost
+- DB_PORT=27017
+- DB_USERNAME=admin
+- DB_PASSWORD=password
+- DB_DATABASE=find-food
 
-#APP_ENVIROMENT= in docker container must use dev||prod
-#APP_ENVIROMENT= for local use must use local
-APP_ENVIROMENT=local
+- #APP_ENVIROMENT= in docker container must use dev||prod
+- #APP_ENVIROMENT= for local use must use local
+- APP_ENVIROMENT=local
 
 - Ejecucion del proyecto para entorno de desarrollo contruir el paquete distribuible:
 `$ npm run start:dev`
@@ -43,6 +42,8 @@ APP_ENVIROMENT=local
 
 
 ### Informacion del servicio
+Propiedad  | Valor| Descrpcion
+------------- | -------------
 Method  | GET | 
 Url  | http://localhost:3000/searcher | 
 parametro 1 | filters  | Cadena de texto separada por ',' con los criterios de la busqueda. Los criterios de busquedas pueden ser la especialidad del restaurant, tipo de comidas, ingredientes requeridos
