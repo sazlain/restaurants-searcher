@@ -69,7 +69,7 @@ Criterios del algoritmo:
 
 - Ingredientes excluidos de los platos: si en los criterios de busqueda aparecen algunos de los ingredientes excluidos de los platos del restaurante se sumara 200 puntos por cada coincidencia.
 
-####El resultado del algoritmo sera la recondacion del restaurante que haya acumulados mas puntos ya que este seria el de mayor coincidencia con los criterios de la busqueda
+#### El resultado del algoritmo sera la recomendacion del restaurante que haya acumulados mas puntos ya que este seria el de mayor coincidencia con los criterios de la busqueda
    
 
 
